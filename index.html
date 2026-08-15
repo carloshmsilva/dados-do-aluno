@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+    <!-- Bootstrap CSS (v5.3.3) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white p-3 text-center shadow-sm mb-4">
+        <h3 class="m-0">Atividade 05</h3>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="card-title m-0">Dados do Aluno</h5>
+                    </div>
+                    <div class="card-body">
+                        <script>
+                            const nome = prompt("Digite seu nome: ");
+                            const idade = prompt("Digite sua idade: ");
+                            let mensalidade = 199.99;
+                            let matriculado = true;
+
+                            // Exibição estilizada no HTML
+                            document.write(`
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong class="text-muted">Nome:</strong>
+                                        <span class="fw-semibold">${nome || 'Não informado'}</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong class="text-muted">Idade:</strong>
+                                        <span class="fw-semibold">${idade || 'Não informada'}</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong class="text-muted">Mensalidade:</strong>
+                                        <span class="badge bg-success fs-6">R$ ${mensalidade.toFixed(2)}</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <strong class="text-muted">Matriculado:</strong>
+                                        <span class="badge ${matriculado ? 'bg-primary' : 'bg-danger'}">${matriculado ? 'Sim' : 'Não'}</span>
+                                    </li>
+                                </ul>
+                            `);
+
+                            // Mantidos os logs originais no Console
+                            console.log(
+                                `Nome: ${nome} - ${typeof nome} \nIdade: ${idade} - ${typeof idade} \nMensalidade: ${mensalidade} - ${typeof mensalidade} \nMatriculado: ${matriculado} - ${typeof matriculado}`
+                            );
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
